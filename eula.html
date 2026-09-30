@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>End User License Agreement (EULA) & Terms of Use — Special Sport Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0B0E14;
+      --card-bg: #121620;
+      --card-border: #1E2638;
+      --accent-red: #E50914;
+      --accent-blue: #3B82F6;
+      --accent-gold: #F59E0B;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-sub: #64748B;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 14, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #E50914, #B81D24);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35);
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link.active {
+      background: var(--accent-red);
+      color: #FFFFFF;
+      border-color: var(--accent-red);
+      box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 24px 80px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 30px;
+      margin-bottom: 30px;
+      background: linear-gradient(180deg, rgba(229, 9, 20, 0.08) 0%, rgba(18, 22, 32, 0.4) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(229, 9, 20, 0.15);
+      border: 1px solid rgba(229, 9, 20, 0.3);
+      color: #FF5A5F;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .effective-date {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    .disclaimer-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .disclaimer-box h4 {
+      color: #FBBF24;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .disclaimer-box p {
+      color: #E2E8F0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card > h3:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: #FFFFFF;
+    }
+
+    a {
+      color: #60A5FA;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #93C5FD;
+      text-decoration: underline;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: #E2E8F0;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .card {
+        padding: 20px;
+      }
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="brand">
+      <div class="brand-logo">S</div>
+      <div class="brand-text">
+        <h1>Special Sport Analysis</h1>
+        <p>End User License Agreement</p>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="privacy_policy.html" class="nav-link">Privacy Policy</a>
+      <a href="eula.html" class="nav-link active">Terms of Use (EULA)</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-badge">Apple & Google Legal Terms</div>
+      <h2>End User License Agreement (EULA)</h2>
+      <p>Terms, Conditions & Guidelines Governing the Use of Special Sport Analysis</p>
+      <div class="effective-date">Last Updated: September 30, 2026 • Version 1.0</div>
+    </div>
+
+    <!-- Mandatory Disclaimer Box -->
+    <div class="disclaimer-box">
+      <h4>⚠️ Important Sports Informational Disclaimer</h4>
+      <p>
+        <strong>Special Sport Analysis</strong> provides statistical sports analysis, algorithmic insights, and educational match previews strictly for <strong>entertainment and informational purposes only</strong>. We are not a gambling operator, bookmaker, or wagering platform. We do not accept bets or guarantee financial returns.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>1. Acceptance of Agreement</h3>
+      <p>
+        By downloading, installing, or using the <strong>Special Sport Analysis</strong> mobile application ("Application", "Service"), you agree to be bound by the terms and conditions of this End User License Agreement ("EULA" or "Terms of Use").
+      </p>
+      <p>
+        If you do not agree with all terms of this Agreement, do not install or use the Application.
+      </p>
+
+      <h3>2. Scope of License (Apple & Google Standard EULA)</h3>
+      <p>
+        We grant you a revocable, non-exclusive, non-transferable, limited license to download, install, and run the Application on compatible mobile devices that you own or control, in accordance with the Apple App Store Terms of Service and Google Play Terms of Service.
+      </p>
+      <p>Under this license, you may NOT:</p>
+      <ul>
+        <li>Decompile, disassemble, reverse engineer, or attempt to derive the source code or proprietary analysis algorithms of the Application;</li>
+        <li>Reproduce, redistribute, republish, resell, or commercialize any premium analysis or statistical projections provided in the App;</li>
+        <li>Use automated crawlers, scrapers, or bots to harvest data from our servers.</li>
+      </ul>
+
+      <h3>3. No Betting Guarantee & Age Requirement</h3>
+      <p>
+        Sports match outcomes are subject to unpredictability. All projections, confidence ratings, and statistics represent informational modeling only.
+      </p>
+      <ul>
+        <li><strong>No Guarantee:</strong> We make no guarantee of past, current, or future match results.</li>
+        <li><strong>No Financial Advice:</strong> Content in this Application does not constitute gambling, financial, or investment advice.</li>
+        <li><strong>Age Restrictions:</strong> You must be at least 18 years old (or the legal age of majority in your jurisdiction) to use this Application.</li>
+      </ul>
+
+      <h3>4. In-App Purchases, Unlocks & Billing</h3>
+      <p>
+        The Application provides digital in-app purchase options (including Single Pick Analysis and Special Combo Analysis unlocks).
+      </p>
+      <ul>
+        <li><strong>Platform Processing:</strong> All transactions are billed securely through Apple In-App Purchases or Google Play In-App Billing (managed via RevenueCat).</li>
+        <li><strong>Syncing Across Devices:</strong> Guest unlocks persist locally on the device. Users with a registered account can sync and restore unlocks across multiple devices.</li>
+        <li><strong>Refund Policies:</strong> Billing disputes and refund requests are processed according to the standard refund terms of the Apple App Store and Google Play Store.</li>
+      </ul>
+
+      <h3>5. Intellectual Property</h3>
+      <p>
+        All content, trademarks, service marks, algorithms, UI designs, and editorial texts within the Application are the exclusive intellectual property of Special Sport Analysis.
+      </p>
+
+      <h3>6. Disclaimer of Warranties & Limitation of Liability</h3>
+      <p>
+        THE APPLICATION IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE MAXIMUM EXTENT PERMITTED BY LAW, SPECIAL SPORT ANALYSIS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, AND SHALL NOT BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, OR PUNITIVE DAMAGES RESULTING FROM YOUR USE OF THE SERVICE.
+      </p>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <h3 style="margin-top: 0; border: none; padding-bottom: 0;">Legal Inquiries</h3>
+      <p style="margin-bottom: 8px;">For questions regarding this EULA or licensing, please contact us:</p>
+      <div class="contact-item">
+        <span>📧 Email:</span>
+        <a href="mailto:support@specialsportanalysis.com">support@specialsportanalysis.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📱 In-App:</span>
+        <span>Settings &rarr; Support & Legal &rarr; Contact Us</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Special Sport Analysis. All rights reserved.</p>
+    <p style="margin-top: 6px; font-size: 0.75rem;">Football • Tennis • Basketball • Professional Sports Insights</p>
+  </footer>
+
+</body>
+</html>
