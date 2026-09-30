@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Special Sport Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0B0E14;
+      --card-bg: #121620;
+      --card-border: #1E2638;
+      --accent-red: #E50914;
+      --accent-blue: #3B82F6;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-sub: #64748B;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 14, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #E50914, #B81D24);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35);
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link.active {
+      background: var(--accent-red);
+      color: #FFFFFF;
+      border-color: var(--accent-red);
+      box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 24px 80px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 30px;
+      margin-bottom: 30px;
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, rgba(18, 22, 32, 0.4) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60A5FA;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .effective-date {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card > h3:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: #FFFFFF;
+    }
+
+    a {
+      color: #60A5FA;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #93C5FD;
+      text-decoration: underline;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: #E2E8F0;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .card {
+        padding: 20px;
+      }
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="brand">
+      <div class="brand-logo">S</div>
+      <div class="brand-text">
+        <h1>Special Sport Analysis</h1>
+        <p>Official Privacy Policy</p>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="privacy_policy.html" class="nav-link active">Privacy Policy</a>
+      <a href="eula.html" class="nav-link">Terms of Use (EULA)</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-badge">Data Protection & Privacy</div>
+      <h2>Privacy Policy</h2>
+      <p>How Special Sport Analysis Collects, Uses, and Safeguards Your Information</p>
+      <div class="effective-date">Last Updated: September 30, 2026 • Version 1.0</div>
+    </div>
+
+    <div class="card">
+      <h3>1. Introduction & Overview</h3>
+      <p>
+        Your privacy is important to us. This Privacy Policy outlines how <strong>Special Sport Analysis</strong> ("we", "us", or "our") collects, uses, protects, and discloses information when you download, install, and use our mobile application across iOS and Android platforms.
+      </p>
+
+      <h3>2. Information We Collect</h3>
+      <p>We prioritize minimal data collection, gathering only what is strictly required to provide sports analysis and preserve your purchases:</p>
+      <ul>
+        <li><strong>Voluntary Account Data:</strong> If you choose to register an account (optional), we collect your email address and preferred display name to authenticate you and sync your unlocked tips across authorized devices.</li>
+        <li><strong>Anonymous Device Identifiers:</strong> Non-personally identifiable tokens used for local unlock persistence and in-app purchase receipts processed through RevenueCat.</li>
+        <li><strong>User Preferences:</strong> Selected language, notification settings, and saved sports category preferences stored locally on your device.</li>
+        <li><strong>Diagnostics & Analytics:</strong> Anonymous crash reports, device model, and operating system version to maintain high performance and fix bugs.</li>
+        <li><strong>No Third-Party Ad Trackers:</strong> We do not use third-party behavioral advertising networks or video ad tracking SDKs.</li>
+      </ul>
+
+      <h3>3. How We Use Your Information</h3>
+      <p>We use the data collected strictly for legitimate application operations, including:</p>
+      <ul>
+        <li>Delivering match previews, statistical projections, and expert sports insights;</li>
+        <li>Validating and synchronizing your digital unlocks (Single Pick Analysis and Special Combo Analysis);</li>
+        <li>Dispatching opt-in push notifications for new match insights and tournament updates;</li>
+        <li>Processing your inquiries and feedback submitted via our in-app Contact Us form;</li>
+        <li>Maintaining platform reliability, preventing abuse, and ensuring app security.</li>
+      </ul>
+
+      <h3>4. Third-Party Service Providers</h3>
+      <p>We collaborate with industry-leading, privacy-compliant service providers to operate our app infrastructure:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Secure cloud database and encrypted authentication.</li>
+        <li><strong>RevenueCat & Apple App Store / Google Play:</strong> Secure processing of digital in-app purchases and receipt validation.</li>
+        <li><strong>OneSignal / Firebase Cloud Messaging:</strong> Reliable delivery of push notification alerts (only when enabled by you).</li>
+      </ul>
+
+      <h3>5. Data Security & Encryption</h3>
+      <p>
+        We employ robust industry-standard security measures, including SSL/TLS encrypted data transmission and AES encryption for data at rest. Passwords are never stored in plaintext and sensitive transaction processing is handled directly by Apple and Google.
+      </p>
+
+      <h3>6. Your Rights & Account Deletion</h3>
+      <p>
+        In compliance with GDPR, CCPA, and applicable global privacy laws, you have full control over your personal data:
+      </p>
+      <ul>
+        <li>You can inspect, update, or correct your profile data at any time;</li>
+        <li>You may request complete deletion of your account and cloud records by submitting a request via our in-app <strong>Contact Us</strong> screen or emailing us directly.</li>
+      </ul>
+
+      <h3>7. Children's Privacy</h3>
+      <p>
+        Our Application is designed for users aged 18 and older (or legal age of majority). We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact our support team immediately.
+      </p>
+
+      <h3>8. Changes to This Policy</h3>
+      <p>
+        We may occasionally update this Privacy Policy to reflect app updates or legal requirements. We encourage users to review this page periodically.
+      </p>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <h3 style="margin-top: 0; border: none; padding-bottom: 0;">Privacy & Legal Support</h3>
+      <p style="margin-bottom: 8px;">For questions regarding this policy or to request data deletion, contact us:</p>
+      <div class="contact-item">
+        <span>📧 Email:</span>
+        <a href="mailto:support@specialsportanalysis.com">support@specialsportanalysis.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📱 In-App:</span>
+        <span>Settings &rarr; Support & Legal &rarr; Contact Us</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Special Sport Analysis. All rights reserved.</p>
+    <p style="margin-top: 6px; font-size: 0.75rem;">Football • Tennis • Basketball • Professional Sports Insights</p>
+  </footer>
+
+</body>
+</html>
