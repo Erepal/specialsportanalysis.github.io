@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Special Sport Analysis</title>
+  <title>Special Sport Analysis — Privacy Policy & Terms of Use (EULA)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
       --card-border: #1E2638;
       --accent-red: #E50914;
       --accent-blue: #3B82F6;
+      --accent-gold: #F59E0B;
       --text-main: #F1F5F9;
       --text-muted: #94A3B8;
       --text-sub: #64748B;
@@ -36,6 +37,7 @@
       padding: 0;
     }
 
+    /* Top Navigation Header */
     header {
       position: sticky;
       top: 0;
@@ -86,46 +88,52 @@
       color: var(--text-muted);
     }
 
-    .nav-links {
+    .nav-tabs {
       display: flex;
-      gap: 12px;
+      gap: 8px;
+      background: var(--card-bg);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
     }
 
-    .nav-link {
+    .tab-btn {
+      background: transparent;
+      border: none;
       color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
       padding: 8px 16px;
       border-radius: 8px;
-      border: 1px solid var(--card-border);
-      background: var(--card-bg);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
       transition: all 0.2s ease;
+      font-family: var(--font-body);
     }
 
-    .nav-link:hover {
-      color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .nav-link.active {
+    .tab-btn.active {
       background: var(--accent-red);
       color: #FFFFFF;
-      border-color: var(--accent-red);
       box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
     }
 
+    .tab-btn:hover:not(.active) {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Container */
     .container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 24px 80px;
     }
 
+    /* Hero Banner */
     .hero {
       text-align: center;
       padding: 40px 20px 30px;
       margin-bottom: 30px;
-      background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, rgba(18, 22, 32, 0.4) 100%);
+      background: linear-gradient(180deg, rgba(229, 9, 20, 0.08) 0%, rgba(18, 22, 32, 0.4) 100%);
       border: 1px solid var(--card-border);
       border-radius: 20px;
     }
@@ -148,7 +156,7 @@
 
     .hero h2 {
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
       margin-bottom: 8px;
       color: #FFFFFF;
@@ -163,6 +171,47 @@
       margin-top: 12px;
       font-size: 0.8rem;
       color: var(--text-sub);
+    }
+
+    /* Important Disclaimer Banner */
+    .disclaimer-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .disclaimer-box h4 {
+      color: #FBBF24;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .disclaimer-box p {
+      color: #E2E8F0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* Content Cards */
+    .doc-section {
+      display: none;
+    }
+
+    .doc-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .card {
@@ -183,10 +232,21 @@
       margin-bottom: 12px;
       padding-bottom: 8px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .card > h3:first-child {
       margin-top: 0;
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-top: 18px;
+      margin-bottom: 8px;
     }
 
     p {
@@ -195,7 +255,7 @@
       margin-bottom: 14px;
     }
 
-    ul {
+    ul, ol {
       margin-left: 24px;
       margin-bottom: 16px;
       color: #CBD5E1;
@@ -213,6 +273,7 @@
     a {
       color: #60A5FA;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
     a:hover {
@@ -226,10 +287,12 @@
       border-radius: 16px;
       padding: 24px;
       margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .contact-item {
-      margin-top: 8px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -245,127 +308,260 @@
       font-size: 0.85rem;
     }
 
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      header, .nav-tabs, .hero-badge {
+        display: none;
+      }
+      .doc-section {
+        display: block !important;
+      }
+      .card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        background: #fff;
+      }
+    }
+
     @media (max-width: 640px) {
       header {
         flex-direction: column;
         gap: 14px;
         align-items: flex-start;
       }
-      .nav-links {
+      .nav-tabs {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
       }
       .card {
         padding: 20px;
       }
       .hero h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Top Navigation -->
   <header>
     <a href="#" class="brand">
       <div class="brand-logo">S</div>
       <div class="brand-text">
         <h1>Special Sport Analysis</h1>
-        <p>Official Privacy Policy</p>
+        <p>Legal, Privacy & Compliance</p>
       </div>
     </a>
-    <div class="nav-links">
-      <a href="privacy_policy.html" class="nav-link active">Privacy Policy</a>
-      <a href="eula.html" class="nav-link">Terms of Use (EULA)</a>
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="showTab('eula')">Terms of Use (EULA)</button>
+      <button class="tab-btn" onclick="showTab('privacy')">Privacy Policy</button>
     </div>
   </header>
 
   <div class="container">
+    <!-- Hero Title -->
     <div class="hero">
-      <div class="hero-badge">Data Protection & Privacy</div>
-      <h2>Privacy Policy</h2>
-      <p>How Special Sport Analysis Collects, Uses, and Safeguards Your Information</p>
+      <div class="hero-badge">Official Legal Document</div>
+      <h2 id="hero-title">End User License Agreement (EULA)</h2>
+      <p id="hero-desc">Terms, Conditions & Guidelines Governing the Use of Special Sport Analysis</p>
       <div class="effective-date">Last Updated: September 30, 2026 • Version 1.0</div>
     </div>
 
-    <div class="card">
-      <h3>1. Introduction & Overview</h3>
+    <!-- Mandatory Disclaimer Box -->
+    <div class="disclaimer-box">
+      <h4>⚠️ Important Sports Informational Disclaimer</h4>
       <p>
-        Your privacy is important to us. This Privacy Policy outlines how <strong>Special Sport Analysis</strong> ("we", "us", or "our") collects, uses, protects, and discloses information when you download, install, and use our mobile application across iOS and Android platforms.
-      </p>
-
-      <h3>2. Information We Collect</h3>
-      <p>We prioritize minimal data collection, gathering only what is strictly required to provide sports analysis and preserve your purchases:</p>
-      <ul>
-        <li><strong>Voluntary Account Data:</strong> If you choose to register an account (optional), we collect your email address and preferred display name to authenticate you and sync your unlocked tips across authorized devices.</li>
-        <li><strong>Anonymous Device Identifiers:</strong> Non-personally identifiable tokens used for local unlock persistence and in-app purchase receipts processed through RevenueCat.</li>
-        <li><strong>User Preferences:</strong> Selected language, notification settings, and saved sports category preferences stored locally on your device.</li>
-        <li><strong>Diagnostics & Analytics:</strong> Anonymous crash reports, device model, and operating system version to maintain high performance and fix bugs.</li>
-        <li><strong>No Third-Party Ad Trackers:</strong> We do not use third-party behavioral advertising networks or video ad tracking SDKs.</li>
-      </ul>
-
-      <h3>3. How We Use Your Information</h3>
-      <p>We use the data collected strictly for legitimate application operations, including:</p>
-      <ul>
-        <li>Delivering match previews, statistical projections, and expert sports insights;</li>
-        <li>Validating and synchronizing your digital unlocks (Single Pick Analysis and Special Combo Analysis);</li>
-        <li>Dispatching opt-in push notifications for new match insights and tournament updates;</li>
-        <li>Processing your inquiries and feedback submitted via our in-app Contact Us form;</li>
-        <li>Maintaining platform reliability, preventing abuse, and ensuring app security.</li>
-      </ul>
-
-      <h3>4. Third-Party Service Providers</h3>
-      <p>We collaborate with industry-leading, privacy-compliant service providers to operate our app infrastructure:</p>
-      <ul>
-        <li><strong>Supabase:</strong> Secure cloud database and encrypted authentication.</li>
-        <li><strong>RevenueCat & Apple App Store / Google Play:</strong> Secure processing of digital in-app purchases and receipt validation.</li>
-        <li><strong>OneSignal / Firebase Cloud Messaging:</strong> Reliable delivery of push notification alerts (only when enabled by you).</li>
-      </ul>
-
-      <h3>5. Data Security & Encryption</h3>
-      <p>
-        We employ robust industry-standard security measures, including SSL/TLS encrypted data transmission and AES encryption for data at rest. Passwords are never stored in plaintext and sensitive transaction processing is handled directly by Apple and Google.
-      </p>
-
-      <h3>6. Your Rights & Account Deletion</h3>
-      <p>
-        In compliance with GDPR, CCPA, and applicable global privacy laws, you have full control over your personal data:
-      </p>
-      <ul>
-        <li>You can inspect, update, or correct your profile data at any time;</li>
-        <li>You may request complete deletion of your account and cloud records by submitting a request via our in-app <strong>Contact Us</strong> screen or emailing us directly.</li>
-      </ul>
-
-      <h3>7. Children's Privacy</h3>
-      <p>
-        Our Application is designed for users aged 18 and older (or legal age of majority). We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact our support team immediately.
-      </p>
-
-      <h3>8. Changes to This Policy</h3>
-      <p>
-        We may occasionally update this Privacy Policy to reflect app updates or legal requirements. We encourage users to review this page periodically.
+        <strong>Special Sport Analysis</strong> provides statistical match data, algorithmic previews, expert sports analysis, and mathematical insights strictly for <strong>entertainment and informational purposes only</strong>. We are not a gambling operator, bookmaker, or betting exchange. We do not accept bets, facilitate wagers, or guarantee financial outcomes.
       </p>
     </div>
 
-    <!-- Contact Card -->
+    <!-- ========================================================= -->
+    <!-- SECTION 1: EULA / TERMS OF SERVICE -->
+    <!-- ========================================================= -->
+    <div id="section-eula" class="doc-section active">
+      <div class="card">
+        <h3>1. Acceptance of Terms</h3>
+        <p>
+          By downloading, installing, accessing, or using the <strong>Special Sport Analysis</strong> mobile application ("Application", "Service", "App"), provided to you by Special Sport Analysis ("we", "us", or "our"), you agree to be bound by this End User License Agreement ("EULA") and Terms of Service.
+        </p>
+        <p>
+          If you do not agree to these terms, do not install, copy, or use the Application. Your continued use of the Application signifies your irrevocable acceptance of these terms.
+        </p>
+
+        <h3>2. Standard Apple & Google License Grant</h3>
+        <p>
+          We grant you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the Application strictly in accordance with the terms of this Agreement and the applicable App Store Terms of Service (including Apple's Standard End User License Agreement — Apple EULA).
+        </p>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Decompile, reverse engineer, disassemble, or derive the source code of the Application;</li>
+          <li>Modify, adapt, translate, or create derivative works based on our predictive algorithms, design, or content;</li>
+          <li>Distribute, sublicense, rent, lease, or resell analyses, predictions, or premium unlocks to third parties without prior written consent;</li>
+          <li>Use automated scripts, bots, scrapers, or crawlers to extract sports data or insights from our servers.</li>
+        </ul>
+
+        <h3>3. Sports Analytics & No Gambling Guarantee</h3>
+        <p>
+          The analyses, historical odds, algorithmic projections, confidence ratings, and strategy insights presented within the Application are calculated based on past performances, team trends, and statistical modeling.
+        </p>
+        <ul>
+          <li><strong>No Guarantee:</strong> Sports outcomes are inherently unpredictable. We make no warranty or guarantee of past or future match outcomes.</li>
+          <li><strong>No Financial Advice:</strong> Nothing contained in the App constitutes investment, financial, legal, or betting advice.</li>
+          <li><strong>Age Requirement:</strong> You must be at least 18 years of age (or the legal age of majority in your jurisdiction) to use this Application.</li>
+        </ul>
+
+        <h3>4. In-App Purchases, Unlocks & Billing</h3>
+        <p>
+          The Application offers consumable in-app purchases and digital unlocks (such as Single Pick Analysis and Special Combo Analysis) processed securely via Apple In-App Purchase and Google Play Billing (managed through RevenueCat).
+        </p>
+        <ul>
+          <li><strong>Digital Content Delivery:</strong> Digital items and unlocks are made available immediately upon verified completion of the transaction.</li>
+          <li><strong>Device & Cloud Sync:</strong> Guests may access unlocks on their current device. Users who register/sign in with an email account will have their unlocks securely backed up and synchronized across multiple devices.</li>
+          <li><strong>Refund Policy:</strong> All billing and refund requests for in-app purchases are governed directly by the respective platform policies (Apple App Store / Google Play Store).</li>
+        </ul>
+
+        <h3>5. Intellectual Property Rights</h3>
+        <p>
+          All trademarks, logos, copyrights, proprietary statistical algorithms, UI graphics, and editorial analyses are the intellectual property of Special Sport Analysis. All rights not expressly granted to you under this Agreement are reserved.
+        </p>
+
+        <h3>6. Termination of Access</h3>
+        <p>
+          We reserve the right to terminate or suspend your access to the Application at any time, without prior notice or liability, for conduct that we believe violates this Agreement or is harmful to other users or our platform.
+        </p>
+
+        <h3>7. Limitation of Liability & Disclaimer of Warranties</h3>
+        <p>
+          THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SPECIAL SPORT ANALYSIS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SERVICE.
+        </p>
+      </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 2: PRIVACY POLICY -->
+    <!-- ========================================================= -->
+    <div id="section-privacy" class="doc-section">
+      <div class="card">
+        <h3>1. Introduction & Overview</h3>
+        <p>
+          Your privacy is important to us. This Privacy Policy explains how <strong>Special Sport Analysis</strong> collects, uses, protects, and discloses information when you use our mobile application.
+        </p>
+
+        <h3>2. Information We Collect</h3>
+        <p>We collect minimal information necessary to deliver and synchronize your sports insights experience:</p>
+        <ul>
+          <li><strong>Voluntary Account Information:</strong> If you choose to register or log in (optional), we collect your email address and preferred display name to authenticate your account and sync your unlocks across devices.</li>
+          <li><strong>Anonymous Device Identifiers:</strong> Anonymous identifiers generated for local unlock persistence and in-app purchase receipts (via RevenueCat).</li>
+          <li><strong>App Preferences:</strong> Language choice, push notification preferences, and saved sports category filters stored locally on your device.</li>
+          <li><strong>Analytics & Diagnostics:</strong> Anonymous technical logs (app version, crash reports, OS version) to ensure high stability and fix bugs.</li>
+          <li><strong>Ad-Free Experience:</strong> We do not utilize intrusive third-party ad networks or video ad trackers.</li>
+        </ul>
+
+        <h3>3. How We Use Your Information</h3>
+        <p>We utilize the collected information strictly for:</p>
+        <ul>
+          <li>Delivering requested sports tips, match analyses, and strategy insights;</li>
+          <li>Restoring and synchronizing purchased tips across authorized devices;</li>
+          <li>Sending optional push notifications for new match previews and game updates;</li>
+          <li>Responding to your support and contact inquiries;</li>
+          <li>Maintaining platform integrity, performance, and security.</li>
+        </ul>
+
+        <h3>4. Third-Party Service Providers</h3>
+        <p>To provide core services, we work with trusted industry partners who maintain rigorous privacy standards:</p>
+        <ul>
+          <li><strong>Supabase:</strong> Secure cloud database and user authentication hosting.</li>
+          <li><strong>RevenueCat & Apple App Store / Google Play:</strong> Secure processing of digital purchases and license validation.</li>
+          <li><strong>OneSignal / Firebase:</strong> Secure delivery of push notifications (only if enabled by you).</li>
+        </ul>
+
+        <h3>5. Data Security & Storage</h3>
+        <p>
+          We implement industry-standard encryption protocols (TLS/SSL in transit, AES encryption at rest) to safeguard your information. Your credentials are never stored in plain text.
+        </p>
+
+        <h3>6. Your Rights & Account Deletion</h3>
+        <p>
+          You have full control over your personal data. Under GDPR, CCPA, and applicable privacy regulations, you may:
+        </p>
+        <ul>
+          <li>Access, update, or correct your profile information at any time;</li>
+          <li>Request complete deletion of your account and associated cloud data by submitting a request via our in-app <strong>Contact Us</strong> screen or emailing our support team.</li>
+        </ul>
+
+        <h3>7. Children's Privacy</h3>
+        <p>
+          The Application is intended for individuals aged 18 and older. We do not knowingly collect personal identifiable information from children under 13. If you become aware that a child has provided us with personal data, please contact us immediately.
+        </p>
+
+        <h3>8. Changes to This Privacy Policy</h3>
+        <p>
+          We may periodically update this policy to reflect enhancements or legal changes. We will notify users of significant changes via an in-app notice or by updating the "Last Updated" timestamp at the top of this document.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Box -->
     <div class="contact-card">
-      <h3 style="margin-top: 0; border: none; padding-bottom: 0;">Privacy & Legal Support</h3>
-      <p style="margin-bottom: 8px;">For questions regarding this policy or to request data deletion, contact us:</p>
+      <h3 style="margin-top: 0; border: none; padding-bottom: 0;">Contact Our Legal & Support Team</h3>
+      <p style="margin-bottom: 8px;">For inquiries regarding this EULA, data privacy requests, or support, please reach out to us:</p>
       <div class="contact-item">
         <span>📧 Email:</span>
         <a href="mailto:support@specialsportanalysis.com">support@specialsportanalysis.com</a>
       </div>
       <div class="contact-item">
         <span>📱 In-App:</span>
-        <span>Settings &rarr; Support & Legal &rarr; Contact Us</span>
+        <span>Settings & Profile &rarr; Contact Us</span>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 Special Sport Analysis. All rights reserved.</p>
     <p style="margin-top: 6px; font-size: 0.75rem;">Football • Tennis • Basketball • Professional Sports Insights</p>
   </footer>
 
+  <script>
+    function showTab(tab) {
+      const eulaSec = document.getElementById('section-eula');
+      const privSec = document.getElementById('section-privacy');
+      const buttons = document.querySelectorAll('.tab-btn');
+      const title = document.getElementById('hero-title');
+      const desc = document.getElementById('hero-desc');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      if (tab === 'eula') {
+        eulaSec.classList.add('active');
+        privSec.classList.remove('active');
+        buttons[0].classList.add('active');
+        title.innerText = 'End User License Agreement (EULA)';
+        desc.innerText = 'Terms, Conditions & Guidelines Governing the Use of Special Sport Analysis';
+        window.location.hash = 'eula';
+      } else {
+        privSec.classList.add('active');
+        eulaSec.classList.remove('active');
+        buttons[1].classList.add('active');
+        title.innerText = 'Privacy Policy';
+        desc.innerText = 'Information Collection, Data Handling & Privacy Commitments';
+        window.location.hash = 'privacy';
+      }
+    }
+
+    // Auto switch based on URL hash
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#privacy') {
+        showTab('privacy');
+      } else {
+        showTab('eula');
+      }
+    });
+  </script>
 </body>
 </html>
